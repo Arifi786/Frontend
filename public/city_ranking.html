@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Ranking</title>
+</head>
+<body>
+    <h1>City Ranking</h1>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Overall Score</th>
+        </tr>
+        {% for city in ranked_cities %}
+        <tr>
+            <td>{{ city.rank }}</td>
+            <td>{{ city.name }}</td> <!-- Corrected from cities.city_name -->
+            <td>{{ city.state }}</td>
+            <td>{{ city.score}}</td> <!-- Corrected from cities.overall_rank -->
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
