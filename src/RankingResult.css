@@ -1,0 +1,35 @@
+.results-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .results-container h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .cities-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cities-table th,
+  .cities-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .cities-table th {
+    background-color: #f4f4f4;
+  }
+  

@@ -1,33 +1,67 @@
-.container {
-    position: relative;
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+  }
+  
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    background-color: black;
+    height: 100%;
+    background: url('./images/pexels-sanaan-3052361.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0 20px;
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width and height */
   }
   
-  .boxes-container {
-    align-self: flex-end; /* Align to the right of the screen */
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .search-bar {
+    margin-right: 20px;
+  }
+  
+  .search-input {
+    padding: 10px;
+    border-radius: 10px; /* Add curved edges */
+    border: 1px solid #0f0303ac;
   }
   
   .content {
     text-align: left;
     color: white;
     margin-bottom: 20px;
+    max-width: 800px; /* Limit the width of the content */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width and height */
   }
   
   .content h1 {
-    font-size: 40px;
+    font-size: 70px;
+  }
+  
+  .boxes-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align boxes to the right */
   }
   
   .boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Keep boxes aligned within the container */
   }
   
   .box {
@@ -39,30 +73,58 @@
   .box-content {
     background-color: white;
     padding: 20px;
+    border-radius: 15px; /* Add curved edges */
   }
+  
+  .button-container {
+    align-self: flex-end; 
+    margin-right: 20px; 
+  } 
   
   .button {
     background-color: red;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Make buttons bigger */
     cursor: pointer;
+    border-radius: 10px; /* Add curved edges */
+    font-size: 16px; /* Increase font size */
   }
   
   @media screen and (max-width: 768px) {
     .container {
-      align-items: center;
+      padding: 20px; /* Ensure consistent padding on smaller screens */
+    }
+  
+    .header {
+      justify-content: center;
     }
   
     .content {
       text-align: center;
       margin-bottom: 0;
+      
     }
   
+    /* .boxes-container {
+      justify-content: center;
+    } */
+    .boxes-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; /* Align boxes to the right */
+        margin-left: auto; /* Move boxes to the far right */
+      }
+      
     .box {
       margin-right: 0;
       margin-bottom: 20px;
       width: 100%;
+    }
+  
+    .button-container {
+      align-self: center; /* Center the button on smaller screens */
+      margin-right: 0; /* Remove right margin for smaller screens */
     }
   }
   

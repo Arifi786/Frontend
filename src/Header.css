@@ -1,4 +1,4 @@
-/* Header.css */
+/* Header.css
 .header {
     width: 100%;
     display: flex;
@@ -17,4 +17,66 @@
     border-radius: 10px;
     border: 1px solid #0f0303ac;
   }
-  
+   */
+   .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 150px; /* Adjust the maximum width as desired */
+    width: 100%;
+}
+
+.search-input {
+    width: 100%; /* Ensure the input takes full width of its container */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #0f0303ac;
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    color: #000; /* Make text color darker */
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    z-index: 1000;
+}
+
+.search-results li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-results li:last-child {
+    border-bottom: none;
+}
+
+.search-results li:hover {
+    background: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .search-bar {
+        max-width: 100%; /* Ensure the search bar takes full width on smaller screens */
+    }
+}

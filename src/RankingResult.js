@@ -1,12 +1,12 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
-import './RankingResults.css';
+import './RankingResult.css';
 
-function RankingResults() {
+function RankingResult() {
   const location = useLocation();
   const { cities } = location.state || { cities: [] };
-
+  console.log('Received cities:', cities);
   return (
     <div>
       <Header />
@@ -41,4 +41,4 @@ function RankingResults() {
   );
 }
 
-export default RankingResults;
+export default RankingResult;
